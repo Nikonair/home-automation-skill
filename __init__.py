@@ -12,10 +12,12 @@ class HomeAutomation(MycroftSkill):
     @intent_file_handler('power.on.cinema.intent')
     def handle_power_on_cinema(self, message):
         self.speak_dialog('automation.home')
+        os.system("cinema_on.py")
     
     @intent_file_handler('power.off.cinema.intent')
     def handle_power_off_cinema(self, message):
         self.speak_dialog('off')
+        os.system("cinema_off.py")
     
     @intent_file_handler('switch.intent')
     def handle_switch(self, message):
